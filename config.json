@@ -1,0 +1,33 @@
+{
+  "symbol":     "HYPEUSDT",
+  "timeframe":  "15m",
+  "capital":    1000.0,
+
+  "leverage":   7,
+  "risk_pct":   1.0,
+  "commission": 0.0005,
+
+  "tp_offset":  4.0,
+  "tp_div":     2.0,
+  "sl_pct":     0.0,
+
+  "dca_pct":    20.0,
+  "dca_mode":   "npos",
+  "dca_ema_filter": true,
+
+  "entry_dir":  "long",
+
+  "conditions": [
+    { "type": "cross_below", "ema_a": 20, "ema_b": 70 }
+  ],
+
+  "telegram_token": "",
+  "telegram_chat_id": "",
+
+  "_doc_conditions": [
+    "Tipos válidos: cross_above, cross_below, above, below, price_above_ema, price_below_ema",
+    "ema_a y ema_b: 8, 13, 20, 34, 50, 70, 100, 150, 200",
+    "dca_mode: 'npos' (agresivo) | 'fixed' (conservador)",
+    "entry_dir: 'long' | 'short'"
+  ]
+}
